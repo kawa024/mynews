@@ -26,3 +26,16 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
+     Route::get('news/create', 'Admin\NewsController@add');
+     Route::post('news/create', 'Admin\NewsController@create'); # 追記
+     //テキストphp/laravel13 課題の3
+     Route::post('profile/create', 'Admin\ProfileController@create');
+     //テキストphp/laravel13 課題の6
+     Route::post('profile/edit', 'Admin\ProfileController@update');
+});
+
+
+
+
