@@ -10,6 +10,7 @@ class ProfileController extends Controller
     //
     public function add()
     {
+        \Debugbar::info('test');
         return view('admin.profile.create');    
     }
      public function create()
