@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.profile')
 @section('title', '登録済のプロフィールの一覧')
 
 @section('content')

@@ -7,6 +7,10 @@ use App\Http\Controllers\Controller;
 
 use App\Profile;
 
+use App\Profile_History;
+
+use Carbon\Carbon;
+
 class ProfileController extends Controller
  {
     //
@@ -46,7 +50,7 @@ class ProfileController extends Controller
     }
     
     public function update(Request $request)
-  {
+   {
       // Validationをかける
       $this->validate($request, Profile::$rules);
       // News Modelからデータを取得する
@@ -57,9 +61,14 @@ class ProfileController extends Controller
 
       // 該当するデータを上書きして保存する
       $profiles->fill($profiles_form)->save();
+      
+      $profile_history = new Profile_History;
+      $profile_history->profile_id = $profiles->id;
+      $profile_history->edited_at = Carbon::now();
+      $profile_history->save();
 
       return redirect('admin/profile');
-  }
+    }
     
     public function index(Request $request)
     {

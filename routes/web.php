@@ -46,6 +46,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
      
      Route::get('news/delete', 'Admin\NewsController@delete');
     });
+    
+    Route::get('/', 'NewsController@index');
 
 
 
