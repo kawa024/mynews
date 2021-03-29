@@ -3,30 +3,30 @@ body {
 }
 
 .header {
-   .logo {
-     width: 120px;
-     height: 82px;
-    }
+  .logo {
+      width: 120px;
+      height: 82px;
   }
+}
 
 .headline {
   .caption {
-        position: relative;
-        width: 350px;
-     .image {
-        img {
-          width: 100%;
-        }
+    position: relative;
+    width: 350px;
+    .image {
+      img {
+    width: 100%;
       }
+    }
     .title {
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.6);
       h1 {
-        color: #fff;
-        font-size: 1.2em;
+    color: #fff;
+    font-size: 1.2em;
       }
     }
     .body {
@@ -50,7 +50,7 @@ body {
     }
     .image {
       img {
-        width: 250px;
+    width: 250px;
       }
     }
   }

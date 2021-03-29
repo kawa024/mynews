@@ -14,6 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::group(['prefix' => 'admin'], function() {
     Route::get('profile/create', 'Admin\ProfileController@add')->middleware('auth');
     Route::get('profile/edit', 'Admin\ProfileController@edit')->middleware('auth');
@@ -48,6 +49,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
     });
     
     Route::get('/', 'NewsController@index');
+    //phplaravel19課題
+    Route::get('/profile', 'ProfileController@index');
 
 
 
