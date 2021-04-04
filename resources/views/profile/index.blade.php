@@ -38,13 +38,13 @@
                                     {{ $post->updated_at->format('Y年m月d日') }}
                                 </div>
                                 <div class="name">
-                                    {{ str_limit($post->name, 150) }}
+                                    {{ str_limit($post->name, 70 ) }}
                                 </div>
                                 <div class="gender">
-                                    {{ str_limit($post->gender, 150) }}
+                                    {{ str_limit($post->gender, 70 ) }}
                                 </div>
                                 <div class="hobby">
-                                    {{ str_limit($post->hobby, 150) }}
+                                    {{ str_limit($post->hobby, 70) }}
                                 </div>
                                 <div class="introduction mt-3">
                                     {{ str_limit($post->introduction, 1500) }}

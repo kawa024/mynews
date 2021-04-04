@@ -14,10 +14,9 @@ class ProfileController extends Controller
         
         if (count($posts) > 0) {
             $headline = $posts->shift();
-            
         } else {
             $headline = null;
         }
-    return view('profile.index', ['headline' => $headline, 'posts' => $posts]);
+        return view('profile.index', ['headline' => $headline, 'posts' => $posts]);
     }
 }
